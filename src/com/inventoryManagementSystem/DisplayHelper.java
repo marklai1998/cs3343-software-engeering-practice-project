@@ -1,10 +1,20 @@
 package com.inventoryManagementSystem;
 
-import java.io.IOException;
 import java.util.Scanner;
 
 class DisplayHelper {
     static int screenWidth = 50;
+
+    static void printHeader(){
+        IMSController controller = IMSController.getInstance();
+        DisplayHelper.printTextMiddleAligned("CS3343 Inventory Management System");
+        if (controller != null) {
+            Staff staff = controller.getStaff();
+            System.out.println("Logged in as: " + staff.getName());
+            System.out.println("User group: " + staff.getUserGroup().getGroupName());
+        }
+        DisplayHelper.printSeparationLine();
+    }
 
     static void printSeparationLine() {
         for (int i = 0; i < screenWidth; i++) System.out.print('=');

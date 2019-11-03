@@ -4,10 +4,10 @@ import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
-public class CSVHelper {
+class CSVHelper {
     BufferedReader csvReader;
 
-    public CSVHelper(String path) {
+    CSVHelper(String path) {
         try {
             InputStream in = getClass().getResourceAsStream(path);
             csvReader = new BufferedReader(new InputStreamReader(in));
@@ -16,7 +16,7 @@ public class CSVHelper {
         }
     }
 
-    public String[] matchLine(String[] input) {
+    String[] matchLine(String[] input) {
         try {
             String row;
             while ((row = csvReader.readLine()) != null) {
@@ -36,7 +36,7 @@ public class CSVHelper {
         return null;
     }
 
-    public void close() {
+    void close() {
         try {
             csvReader.close();
         } catch (Exception e) {

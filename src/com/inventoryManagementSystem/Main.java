@@ -1,20 +1,16 @@
 package com.inventoryManagementSystem;
 
-import java.util.Arrays;
+import com.inventoryManagementSystem.Command.IMSCommand;
+
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         while (true) {
             IMSController controller = IMSController.getInstance();
-            DisplayHelper.printTextMiddleAligned("CS3343 Inventory Management System");
-            if (controller != null) System.out.println("Logged in as: " + controller.getStaff().getName());
-            DisplayHelper.printSeparationLine();
-            if (controller == null) {
-                LoginScreen();
-            } else {
-                mainMenu();
-            }
+            DisplayHelper.printHeader();
+            if (controller == null) LoginScreen();
+            else mainMenu();
             DisplayHelper.cls();
         }
     }
@@ -23,18 +19,17 @@ public class Main {
         Scanner scan = new Scanner(System.in);
         CSVHelper users = new CSVHelper("./Data/users.csv");
 
-        System.out.println("User name:");
+        System.out.print("User name: ");
         String userName = scan.nextLine();
-        System.out.println("Password:");
+        System.out.print("Password: ");
         String password = scan.nextLine();
         String[] matchData = {"*", userName, password, "*"};
         String[] matched = users.matchLine(matchData);
         if (matched == null) {
             System.out.println("Invalid username or password!");
         } else {
-            System.out.print(Arrays.toString(matched));
             System.out.println("Login Success!");
-            Staff staff = new Staff(Integer.parseInt(matched[0]), matched[1], matched[2]);
+            Staff staff = new Staff(Integer.parseInt(matched[0]), matched[1], matched[2], Integer.parseInt(matched[3]));
             IMSController.initInstance(staff);
         }
         users.close();
@@ -42,6 +37,23 @@ public class Main {
     }
 
     private static void mainMenu() {
-
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Please select action:");
+        System.out.println();
+        IMSCommand[] availableCommands = IMSController.getInstance().getAvailableCommands();
+        for (int i = 0; i < availableCommands.length; i++) {
+            System.out.println((i + 1) + ". " + availableCommands[i].getDescription());
+        }
+        System.out.println();
+        DisplayHelper.printSeparationLine();
+        System.out.print("Action number: ");
+        try {
+            int actionNumber = scan.nextInt();
+            DisplayHelper.cls();
+            IMSController.getInstance().run(availableCommands[actionNumber - 1]);
+        } catch (Exception e) {
+            System.out.println("Invalid input!");
+            DisplayHelper.pressEnterToContinue();
+        }
     }
 }
