@@ -43,8 +43,6 @@ public class IMSController {
         if (command.getMinPermission() > staff.getUserGroup().getPermissionLevel()) {
             System.out.println("Permission Denied");
             DisplayHelper.pressEnterToContinue();
-        } else {
-            command.execute();
-        }
+        } else command.execute();
     }
 }

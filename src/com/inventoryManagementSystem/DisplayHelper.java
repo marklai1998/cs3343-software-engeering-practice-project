@@ -3,7 +3,7 @@ package com.inventoryManagementSystem;
 import java.util.Scanner;
 
 public class DisplayHelper {
-    static int screenWidth = 50;
+    private static final int screenWidth = 50;
 
     public static void printHeader() {
         IMSController controller = IMSController.getInstance();
@@ -21,11 +21,10 @@ public class DisplayHelper {
         System.out.print("\n");
     }
 
-    public  static void printTextMiddleAligned(String text) {
+    public static void printTextMiddleAligned(String text) {
         int spaceLength = (screenWidth - text.length()) / 2;
         for (int i = 0; i < spaceLength; i++) System.out.print(' ');
-        System.out.print(text);
-        System.out.print("\n");
+        System.out.print(text + "\n");
     }
 
     public static void cls() {
@@ -36,7 +35,7 @@ public class DisplayHelper {
         }
     }
 
-    public  static void pressEnterToContinue() {
+    public static void pressEnterToContinue() {
         System.out.println("Press Enter key to continue...");
         Scanner scan = new Scanner(System.in);
         scan.nextLine();
