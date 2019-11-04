@@ -17,14 +17,14 @@ public class Main {
 
     private static void LoginScreen() {
         Scanner scan = new Scanner(System.in);
-        CSVHelper users = new CSVHelper("./Data/users.csv");
+        CSVHelper users = new CSVHelper("/com/inventoryManagementSystem/Data/users.csv");
 
         System.out.print("User name: ");
         String userName = scan.nextLine();
         System.out.print("Password: ");
         String password = scan.nextLine();
-        String[] matchData = {"*", userName, password, "*"};
-        String[] matched = users.matchLine(matchData);
+        String[] matchData = {null, userName, password, null};
+        String[] matched = users.findOne(matchData);
         if (matched == null) {
             System.out.println("Invalid username or password!");
         } else {
@@ -32,7 +32,6 @@ public class Main {
             Staff staff = new Staff(Integer.parseInt(matched[0]), matched[1], matched[2], Integer.parseInt(matched[3]));
             IMSController.initInstance(staff);
         }
-        users.close();
         DisplayHelper.pressEnterToContinue();
     }
 

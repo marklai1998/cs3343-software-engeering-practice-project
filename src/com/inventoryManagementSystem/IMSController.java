@@ -20,11 +20,11 @@ public class IMSController {
         instance = null;
     }
 
-    static IMSController getInstance() {
+    public static IMSController getInstance() {
         return instance;
     }
 
-    Staff getStaff() {
+    public Staff getStaff() {
         return this.staff;
     }
 
