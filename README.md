@@ -1,5 +1,3 @@
-# cs3343-software-engeering-practice-project
-
 # CS3343 Software Engineering Practice Project
 ## Introduction
 This repository is created for `City University HK` course `CS3343 - Software Engineering Practice` group project <br />
