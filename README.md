@@ -7,6 +7,16 @@ All credit goes to: Mark Lai
 Create a simple Java program (Inventory Management System in this case) to implement code testing strategy using Junit and project management skills
 
 ## Getting Started
+Run it directly from IDE:
+1. Clone the repository
+
+2. Open the project with Intellij
+
+3. Run it
+
+Note. there is no eclipse configuration yet
+
+Compile it with command line:
 1. Clone the repository
 
 2. Change directory to the project src
