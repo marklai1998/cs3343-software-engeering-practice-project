@@ -17,7 +17,7 @@ public class ViewProfile implements IMSCommand {
         Staff staff = IMSController.getInstance().getStaff();
         DisplayHelper.printHeader();
         UserGroup group = staff.getUserGroup();
-        System.out.println("id: " + staff.getId());
+        System.out.println("User id: " + staff.getId());
         System.out.println("User name: " + staff.getName());
         System.out.println("Password: " + staff.getPassword());
         System.out.println("User group: " + group.getGroupName() + "(" + group.getGroupId() + ")");

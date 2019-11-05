@@ -32,7 +32,7 @@ public class CreateNewUser implements IMSCommand {
         while (true) {
             try {
                 Scanner scan = new Scanner(System.in);
-                System.out.println("id: ");
+                System.out.println("User id: ");
                 int id = scan.nextInt();
                 String[] matcher = {Integer.toString(id), null, null, null};
                 CSVHelper users = new CSVHelper("/com/inventoryManagementSystem/Data/users.csv");
