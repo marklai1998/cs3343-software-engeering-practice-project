@@ -39,7 +39,7 @@ public enum UserGroup {
             case 3:
                 return ADMIN;
             default:
-                return DEFAULT;
+                return null;
         }
     }
 }

@@ -8,6 +8,14 @@ import com.inventoryManagementSystem.Staff;
 import java.util.Scanner;
 
 public class Login implements IMSCommand {
+    public int getMinPermission() {
+        return -1;
+    }
+
+    public String getDescription() {
+        return "Login";
+    }
+
     public void execute() {
         Scanner scan = new Scanner(System.in);
         CSVHelper users = new CSVHelper("/com/inventoryManagementSystem/Data/users.csv");
@@ -25,13 +33,5 @@ public class Login implements IMSCommand {
             IMSController.getInstance().setStaff(staff);
         }
         DisplayHelper.pressEnterToContinue();
-    }
-
-    public int getMinPermission() {
-        return -1;
-    }
-
-    public String getDescription() {
-        return "Login";
     }
 }

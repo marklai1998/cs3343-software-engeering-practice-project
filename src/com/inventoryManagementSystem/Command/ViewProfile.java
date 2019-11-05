@@ -8,6 +8,14 @@ import com.inventoryManagementSystem.Staff;
 import java.util.Scanner;
 
 public class ViewProfile implements IMSCommand {
+    public int getMinPermission() {
+        return 0;
+    }
+
+    public String getDescription() {
+        return "View Profile";
+    }
+
     public void execute() {
         Staff staff = IMSController.getInstance().getStaff();
         DisplayHelper.printHeader();
@@ -18,13 +26,5 @@ public class ViewProfile implements IMSCommand {
         System.out.println("User group: " + staff.getUserGroup().getGroupName());
         DisplayHelper.pressEnterToContinue();
         DisplayHelper.cls();
-    }
-
-    public int getMinPermission() {
-        return 0;
-    }
-
-    public String getDescription() {
-        return "View Profile";
     }
 }

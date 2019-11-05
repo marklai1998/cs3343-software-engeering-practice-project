@@ -12,6 +12,20 @@ public class CSVHelper {
         this.path = url.getFile();
     }
 
+    private ArrayList<String[]> getCsvBuffer() {
+        try {
+            ArrayList<String[]> Buffer = new ArrayList<>();
+            BufferedReader csvReader = new BufferedReader(new FileReader(path));
+            String row;
+            while ((row = csvReader.readLine()) != null) Buffer.add(row.split(","));
+            csvReader.close();
+            return Buffer;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
     public String[] findOne(String[] matcher) {
         try {
             BufferedReader csvReader = new BufferedReader(new FileReader(path));
@@ -41,13 +55,7 @@ public class CSVHelper {
 
     public void findOneAndUpdate(String[] matcher, String[] update) {
         try {
-//            Write the whole csv to the buffer
-            ArrayList<String[]> Buffer = new ArrayList<>();
-            BufferedReader csvReader = new BufferedReader(new FileReader(path));
-            String row;
-            while ((row = csvReader.readLine()) != null) Buffer.add(row.split(","));
-            csvReader.close();
-
+            ArrayList<String[]> Buffer = getCsvBuffer();
 //            write a new csv with new data
             FileWriter csvWriter = new FileWriter(path);
             for (String[] rowData : Buffer) {
@@ -69,6 +77,24 @@ public class CSVHelper {
                 csvWriter.append(String.join(",", newRow));
                 csvWriter.append("\n");
             }
+            csvWriter.flush();
+            csvWriter.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void insertOne(String[] data) {
+        try {
+            ArrayList<String[]> Buffer = getCsvBuffer();
+//            write a new csv with new data
+            FileWriter csvWriter = new FileWriter(path);
+            for (String[] rowData : Buffer) {
+                csvWriter.append(String.join(",", rowData));
+                csvWriter.append("\n");
+            }
+            csvWriter.append(String.join(",", data));
+            csvWriter.append("\n");
             csvWriter.flush();
             csvWriter.close();
         } catch (Exception e) {

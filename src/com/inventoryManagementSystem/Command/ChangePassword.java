@@ -8,6 +8,14 @@ import com.inventoryManagementSystem.Staff;
 import java.util.Scanner;
 
 public class ChangePassword implements IMSCommand {
+    public int getMinPermission() {
+        return 0;
+    }
+
+    public String getDescription() {
+        return "Change password";
+    }
+    
     public void execute() {
         Scanner scan = new Scanner(System.in);
         CSVHelper users = new CSVHelper("/com/inventoryManagementSystem/Data/users.csv");
@@ -35,11 +43,5 @@ public class ChangePassword implements IMSCommand {
         }
     }
 
-    public int getMinPermission() {
-        return 0;
-    }
 
-    public String getDescription() {
-        return "Change password";
-    }
 }
