@@ -1,9 +1,6 @@
 package com.inventoryManagementSystem.Command;
 
-import com.inventoryManagementSystem.CSVHelper;
-import com.inventoryManagementSystem.DisplayHelper;
-import com.inventoryManagementSystem.IMSController;
-import com.inventoryManagementSystem.Staff;
+import com.inventoryManagementSystem.*;
 
 import java.util.Scanner;
 
@@ -19,10 +16,11 @@ public class ViewProfile implements IMSCommand {
     public void execute() {
         Staff staff = IMSController.getInstance().getStaff();
         DisplayHelper.printHeader();
+        UserGroup group = staff.getUserGroup();
         System.out.println("id: " + staff.getId());
         System.out.println("User name: " + staff.getName());
         System.out.println("Password: " + staff.getPassword());
-        System.out.println("User group: " + staff.getUserGroup().getGroupName());
+        System.out.println("User group: " + group.getGroupName() + "(" + group.getGroupId() + ")");
         DisplayHelper.pressEnterToContinue();
         DisplayHelper.cls();
     }

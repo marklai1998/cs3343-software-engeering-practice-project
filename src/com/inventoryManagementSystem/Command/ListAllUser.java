@@ -21,9 +21,10 @@ public class ListAllUser implements IMSCommand {
         CSVHelper users = new CSVHelper("/com/inventoryManagementSystem/Data/users.csv");
         ArrayList<String[]> allData = users.getCsvBuffer();
         for (String[] rowData : allData) {
+            UserGroup group = UserGroup.getUserGroup(Integer.parseInt(rowData[3]));
             System.out.println("User id: " + rowData[0]);
             System.out.println("Username: " + rowData[1]);
-            System.out.println("User group: " + UserGroup.getUserGroup(Integer.parseInt(rowData[3])));
+            System.out.println("User group: " + group + "(" + group.getGroupId() + ")");
             System.out.println();
         }
         DisplayHelper.pressEnterToContinue();
