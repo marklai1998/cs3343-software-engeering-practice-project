@@ -26,6 +26,15 @@ public class CSVHelper {
         return null;
     }
 
+    private boolean isRowMatch(String[] row, String[] matcher) {
+        for (int i = 0; i < row.length; i++) {
+            if (matcher[i] != null && !matcher[i].equals(row[i])) {
+                return false;
+            }
+        }
+        return true;
+    }
+
     public String[] findOne(String[] matcher) {
         try {
             BufferedReader csvReader = new BufferedReader(new FileReader(path));
@@ -59,23 +68,40 @@ public class CSVHelper {
 //            write a new csv with new data
             FileWriter csvWriter = new FileWriter(path);
             for (String[] rowData : Buffer) {
-                boolean matched = true;
-                for (int i = 0; i < rowData.length; i++) {
-                    if (matcher[i] != null && !matcher[i].equals(rowData[i])) {
-                        matched = false;
-                        break;
-                    }
-                }
-                String[] newRow = new String[rowData.length];
+                boolean matched = isRowMatch(rowData, matcher);
+
+                String[] newRow = rowData;
                 if (matched) {
+                    newRow = new String[rowData.length];
                     for (int i = 0; i < newRow.length; i++) {
                         newRow[i] = update[i] == null ? rowData[i] : update[i];
                     }
-                } else {
-                    newRow = rowData;
                 }
                 csvWriter.append(String.join(",", newRow));
                 csvWriter.append("\n");
+            }
+            csvWriter.flush();
+            csvWriter.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void findOneAndRemove(String[] matcher) {
+        try {
+            ArrayList<String[]> Buffer = getCsvBuffer();
+//            write a new csv with new data
+            FileWriter csvWriter = new FileWriter(path);
+            boolean foundOne = false;
+            for (String[] rowData : Buffer) {
+                boolean matched = isRowMatch(rowData, matcher);
+
+                if (matched && !foundOne) {
+                    foundOne = true;
+                } else {
+                    csvWriter.append(String.join(",", rowData));
+                    csvWriter.append("\n");
+                }
             }
             csvWriter.flush();
             csvWriter.close();

@@ -10,7 +10,7 @@ public class CreateNewUser implements IMSCommand {
     }
 
     public String getDescription() {
-        return "Create new User";
+        return "Create new user";
     }
 
     public void execute() {
@@ -32,7 +32,6 @@ public class CreateNewUser implements IMSCommand {
     private static int getId() {
         while (true) {
             try {
-
                 Scanner scan = new Scanner(System.in);
                 System.out.println("id: ");
                 int id = scan.nextInt();
