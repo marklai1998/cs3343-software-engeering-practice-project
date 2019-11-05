@@ -5,6 +5,7 @@ public interface IMSCommand {
             new Login(),
             new ViewProfile(),
             new ChangePassword(),
+            new UpdateUserGroup(),
             new CreateNewUser(),
             new RemoveUser(),
             new Logout()

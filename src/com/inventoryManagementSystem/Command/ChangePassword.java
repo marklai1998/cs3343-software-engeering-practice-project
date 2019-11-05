@@ -15,7 +15,7 @@ public class ChangePassword implements IMSCommand {
     public String getDescription() {
         return "Change password";
     }
-    
+
     public void execute() {
         Scanner scan = new Scanner(System.in);
         CSVHelper users = new CSVHelper("/com/inventoryManagementSystem/Data/users.csv");
@@ -42,6 +42,4 @@ public class ChangePassword implements IMSCommand {
             DisplayHelper.cls();
         }
     }
-
-
 }
