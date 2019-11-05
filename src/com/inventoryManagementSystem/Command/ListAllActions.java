@@ -16,7 +16,7 @@ public class ListAllActions implements IMSCommand {
 
     public void execute() {
         DisplayHelper.printHeader();
-        Scanner scan = new Scanner(System.in);
+
         System.out.println("Please select action:");
         System.out.println();
         IMSCommand[] availableCommands = IMSController.getInstance().getAvailableCommands();
@@ -26,14 +26,19 @@ public class ListAllActions implements IMSCommand {
         System.out.println();
         DisplayHelper.printSeparationLine();
         System.out.print("Action number: ");
+        int actionNumber = getActionNumber();
+        IMSController.getInstance().run(availableCommands[actionNumber - 1]);
+        DisplayHelper.cls();
+    }
+
+    private int getActionNumber() {
         try {
-            int actionNumber = scan.nextInt();
-            DisplayHelper.cls();
-            IMSController.getInstance().run(availableCommands[actionNumber - 1]);
+            Scanner scan = new Scanner(System.in);
+            return scan.nextInt();
         } catch (Exception e) {
             System.out.println("Invalid input!");
             DisplayHelper.pressEnterToContinue();
         }
-        DisplayHelper.cls();
+        return -1;
     }
 }
