@@ -23,6 +23,7 @@ public class ChangePassword implements IMSCommand {
                 DisplayHelper.pressEnterToContinue();
             } else {
                 Staff staff = IMSController.getInstance().getStaff();
+                staff.setPassword(password);
                 String[] matchData = {String.valueOf(staff.getId()), null, null, null};
                 String[] newData = {null, null, password, null};
                 users.findOneAndUpdate(matchData, newData);

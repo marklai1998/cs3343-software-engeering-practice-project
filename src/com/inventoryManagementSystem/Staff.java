@@ -21,6 +21,14 @@ public class Staff {
         return name;
     }
 
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
     public int getId() {
         return id;
     }

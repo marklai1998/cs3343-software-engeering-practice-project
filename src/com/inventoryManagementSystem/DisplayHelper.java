@@ -11,7 +11,6 @@ public class DisplayHelper {
         if (controller.getStaff() != null) {
             Staff staff = controller.getStaff();
             System.out.println("Logged in as: " + staff.getName());
-            System.out.println("User group: " + staff.getUserGroup().getGroupName());
         }
         DisplayHelper.printSeparationLine();
     }
@@ -36,6 +35,7 @@ public class DisplayHelper {
     }
 
     public static void pressEnterToContinue() {
+        System.out.println();
         System.out.println("Press Enter key to continue...");
         Scanner scan = new Scanner(System.in);
         scan.nextLine();
