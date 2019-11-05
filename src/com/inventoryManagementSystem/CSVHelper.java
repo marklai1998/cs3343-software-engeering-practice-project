@@ -47,6 +47,14 @@ public class CSVHelper {
         return true;
     }
 
+    private String[] mergeRow(String[] originalRow, String[] newRow) {
+        String[] mergedRow = new String[newRow.length];
+        for (int i = 0; i < newRow.length; i++) {
+            mergedRow[i] = newRow[i] == null ? originalRow[i] : newRow[i];
+        }
+        return mergedRow;
+    }
+
     public String[] findOne(String[] matcher) {
         ArrayList<String[]> Buffer = getCsvBuffer();
         for (String[] rowData : Buffer) {
@@ -60,11 +68,7 @@ public class CSVHelper {
         for (int row = 0; row < buffer.size(); row++) {
             String[] rowData = buffer.get(row);
             if (isRowMatch(rowData, matcher)) {
-                String[] newRow = new String[rowData.length];
-                for (int i = 0; i < newRow.length; i++) {
-                    newRow[i] = update[i] == null ? rowData[i] : update[i];
-                }
-                buffer.set(row, newRow);
+                buffer.set(row, mergeRow(rowData, update));
                 break;
             }
         }
