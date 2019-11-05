@@ -9,14 +9,13 @@ public class Main {
     public static void main(String[] args) {
         while (true) {
             IMSController controller = IMSController.getInstance();
-            DisplayHelper.printHeader();
             if (controller.getStaff() == null) controller.run(new Login());
             else mainMenu();
-            DisplayHelper.cls();
         }
     }
 
     private static void mainMenu() {
+        DisplayHelper.printHeader();
         Scanner scan = new Scanner(System.in);
         System.out.println("Please select action:");
         System.out.println();
@@ -35,5 +34,6 @@ public class Main {
             System.out.println("Invalid input!");
             DisplayHelper.pressEnterToContinue();
         }
+        DisplayHelper.cls();
     }
 }

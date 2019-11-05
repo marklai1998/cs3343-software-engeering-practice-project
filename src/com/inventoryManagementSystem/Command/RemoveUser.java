@@ -17,7 +17,6 @@ public class RemoveUser implements IMSCommand {
 
     public void execute() {
         DisplayHelper.printHeader();
-        System.out.println();
         int id = getId();
         CSVHelper users = new CSVHelper("/com/inventoryManagementSystem/Data/users.csv");
         String[] matcher = {Integer.toString(id), null, null, null};
@@ -25,7 +24,6 @@ public class RemoveUser implements IMSCommand {
         System.out.println("Success!");
         DisplayHelper.pressEnterToContinue();
         DisplayHelper.cls();
-
     }
 
     private static int getId() {

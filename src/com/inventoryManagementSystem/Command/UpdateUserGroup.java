@@ -17,7 +17,6 @@ public class UpdateUserGroup implements IMSCommand {
 
     public void execute() {
         DisplayHelper.printHeader();
-        System.out.println();
         int id = getId();
         int newGroupId = getGroupId();
         CSVHelper users = new CSVHelper("/com/inventoryManagementSystem/Data/users.csv");

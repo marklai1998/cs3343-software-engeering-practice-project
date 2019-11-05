@@ -13,6 +13,7 @@ public class DisplayHelper {
             System.out.println("Logged in as: " + staff.getName());
         }
         DisplayHelper.printSeparationLine();
+        System.out.println();
     }
 
     public static void printSeparationLine() {

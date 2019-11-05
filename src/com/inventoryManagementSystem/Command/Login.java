@@ -17,21 +17,26 @@ public class Login implements IMSCommand {
     }
 
     public void execute() {
-        Scanner scan = new Scanner(System.in);
-        CSVHelper users = new CSVHelper("/com/inventoryManagementSystem/Data/users.csv");
+        while (true) {
+            DisplayHelper.printHeader();
+            Scanner scan = new Scanner(System.in);
+            CSVHelper users = new CSVHelper("/com/inventoryManagementSystem/Data/users.csv");
 
-        System.out.print("User name: ");
-        String userName = scan.nextLine();
-        System.out.print("Password: ");
-        String password = scan.nextLine();
-        String[] matchData = {null, userName, password, null};
-        String[] matched = users.findOne(matchData);
-        if (matched == null) System.out.println("Invalid username or password!");
-        else {
-            System.out.println("Login Success!");
-            Staff staff = new Staff(Integer.parseInt(matched[0]), matched[1], matched[2], Integer.parseInt(matched[3]));
-            IMSController.getInstance().setStaff(staff);
+            System.out.print("User name: ");
+            String userName = scan.nextLine();
+            System.out.print("Password: ");
+            String password = scan.nextLine();
+            String[] matchData = {null, userName, password, null};
+            String[] matched = users.findOne(matchData);
+            if (matched == null) System.out.println("Invalid username or password!");
+            else {
+                System.out.println("Login Success!");
+                Staff staff = new Staff(Integer.parseInt(matched[0]), matched[1], matched[2], Integer.parseInt(matched[3]));
+                IMSController.getInstance().setStaff(staff);
+                break;
+            }
+            DisplayHelper.pressEnterToContinue();
+            DisplayHelper.cls();
         }
-        DisplayHelper.pressEnterToContinue();
     }
 }

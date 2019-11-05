@@ -15,7 +15,6 @@ public class CreateNewUser implements IMSCommand {
 
     public void execute() {
         DisplayHelper.printHeader();
-        System.out.println();
         int id = getId();
         String username = getUsername();
         String password = getPassword();

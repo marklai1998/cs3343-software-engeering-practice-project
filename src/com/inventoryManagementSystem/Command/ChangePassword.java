@@ -21,7 +21,6 @@ public class ChangePassword implements IMSCommand {
         CSVHelper users = new CSVHelper("/com/inventoryManagementSystem/Data/users.csv");
         while (true) {
             DisplayHelper.printHeader();
-            System.out.println();
             System.out.println("New password: ");
             String password = scan.nextLine();
             System.out.println("Retype password: ");

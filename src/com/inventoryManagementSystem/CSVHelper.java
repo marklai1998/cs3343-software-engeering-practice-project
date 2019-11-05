@@ -12,7 +12,7 @@ public class CSVHelper {
         this.path = url.getFile();
     }
 
-    private ArrayList<String[]> getCsvBuffer() {
+    public ArrayList<String[]> getCsvBuffer() {
         try {
             ArrayList<String[]> Buffer = new ArrayList<>();
             BufferedReader csvReader = new BufferedReader(new FileReader(path));
