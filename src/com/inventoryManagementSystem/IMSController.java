@@ -5,23 +5,16 @@ import com.inventoryManagementSystem.Command.IMSCommand;
 import java.util.ArrayList;
 
 public class IMSController {
-    private static IMSController instance = null;
-    private Staff staff;
+    private static IMSController instance = new IMSController();
+    private Staff staff = null;
 
-    private IMSController(Staff s) {
-        staff = s;
-    }
-
-    static void initInstance(Staff staff) {
-        instance = new IMSController(staff);
-    }
-
-    public static void destroyInstance() {
-        instance = null;
-    }
 
     public static IMSController getInstance() {
         return instance;
+    }
+
+    public void setStaff(Staff staff) {
+        this.staff = staff;
     }
 
     public Staff getStaff() {
@@ -29,10 +22,11 @@ public class IMSController {
     }
 
     IMSCommand[] getAvailableCommands() {
+        if (this.staff == null) return new IMSCommand[0];
         IMSCommand[] allCommands = IMSCommand.allCommands;
         ArrayList<IMSCommand> availableCommands = new ArrayList<>();
         for (IMSCommand command : allCommands) {
-            if (command.getMinPermission() <= staff.getUserGroup().getPermissionLevel()) {
+            if (command.getMinPermission() >= 0 && command.getMinPermission() <= staff.getUserGroup().getPermissionLevel()) {
                 availableCommands.add(command);
             }
         }
@@ -40,9 +34,11 @@ public class IMSController {
     }
 
     void run(IMSCommand command) {
-        if (command.getMinPermission() > staff.getUserGroup().getPermissionLevel()) {
+        if (command.getMinPermission() < 0 || command.getMinPermission() <= staff.getUserGroup().getPermissionLevel()) {
+            command.execute();
+        } else {
             System.out.println("Permission Denied");
             DisplayHelper.pressEnterToContinue();
-        } else command.execute();
+        }
     }
 }

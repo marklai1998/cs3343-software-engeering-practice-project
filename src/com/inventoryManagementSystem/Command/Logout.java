@@ -4,7 +4,7 @@ import com.inventoryManagementSystem.IMSController;
 
 public class Logout implements IMSCommand {
     public void execute() {
-        IMSController.destroyInstance();
+        IMSController.getInstance().setStaff(null);
     }
 
     public int getMinPermission() {

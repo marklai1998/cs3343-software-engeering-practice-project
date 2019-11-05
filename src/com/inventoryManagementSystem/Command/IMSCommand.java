@@ -1,7 +1,7 @@
 package com.inventoryManagementSystem.Command;
 
 public interface IMSCommand {
-    IMSCommand[] allCommands = {new ChangePassword(), new Logout()};
+    IMSCommand[] allCommands = {new Login(), new ChangePassword(), new Logout()};
 
     void execute();
 

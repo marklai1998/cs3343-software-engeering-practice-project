@@ -8,7 +8,7 @@ public class DisplayHelper {
     public static void printHeader() {
         IMSController controller = IMSController.getInstance();
         DisplayHelper.printTextMiddleAligned("CS3343 Inventory Management System");
-        if (controller != null) {
+        if (controller.getStaff() != null) {
             Staff staff = controller.getStaff();
             System.out.println("Logged in as: " + staff.getName());
             System.out.println("User group: " + staff.getUserGroup().getGroupName());
