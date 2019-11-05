@@ -3,6 +3,7 @@ package com.inventoryManagementSystem.Command;
 public interface IMSCommand {
     IMSCommand[] allCommands = {
             new Login(),
+            new ListAllActions(),
             new ViewProfile(),
             new ChangePassword(),
             new ListAllUser(),

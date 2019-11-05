@@ -21,7 +21,7 @@ public class IMSController {
         return this.staff;
     }
 
-    IMSCommand[] getAvailableCommands() {
+    public  IMSCommand[] getAvailableCommands() {
         if (this.staff == null) return new IMSCommand[0];
         IMSCommand[] allCommands = IMSCommand.allCommands;
         ArrayList<IMSCommand> availableCommands = new ArrayList<>();
@@ -33,7 +33,7 @@ public class IMSController {
         return availableCommands.toArray(new IMSCommand[0]);
     }
 
-    void run(IMSCommand command) {
+    public void run(IMSCommand command) {
         if (command.getMinPermission() < 0 || command.getMinPermission() <= staff.getUserGroup().getPermissionLevel()) {
             command.execute();
         } else {

@@ -1,21 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/com/inventoryManagementSystem/Main.java" line="37" mnemonic="9" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="65899b40-561c-4c0a-99ae-9c2fe98c421e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/ListAllUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/ListAllActions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inventoryManagementSystem/CSVHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inventoryManagementSystem/CSVHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/ChangePassword.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/ChangePassword.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/CreateNewUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/CreateNewUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/IMSCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/IMSCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/RemoveUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/RemoveUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/UpdateUserGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/UpdateUserGroup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/ViewProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/ViewProfile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inventoryManagementSystem/DisplayHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inventoryManagementSystem/DisplayHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/inventoryManagementSystem/IMSController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inventoryManagementSystem/IMSController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -39,14 +29,14 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="49" />
+          <entry key="JAVA" value="52" />
           <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="6261" />
+          <entry key="JAVA" value="6295" />
           <entry key="Markdown" value="212" />
           <entry key="PLAIN_TEXT" value="7" />
         </counts>
@@ -55,23 +45,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/IMSCommand.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/ChangePassword.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="22" column="40" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="38">
+              <caret line="2" column="29" lean-forward="true" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -126,10 +104,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/inventoryManagementSystem/CSVHelper.java">
+        <entry file="file://$PROJECT_DIR$/src/com/inventoryManagementSystem/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="912">
-              <caret line="81" column="13" lean-forward="true" selection-start-line="69" selection-start-column="12" selection-end-line="81" selection-end-column="13" />
+            <state relative-caret-position="266">
+              <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -138,19 +116,37 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/UpdateUserGroup.java">
+        <entry file="file://$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/ListAllActions.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="18" column="36" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
+            <state relative-caret-position="323">
+              <caret line="21" column="89" selection-start-line="21" selection-start-column="69" selection-end-line="21" selection-end-column="89" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/inventoryManagementSystem/IMSController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="23" column="11" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/ViewProfile.java">
+        <entry file="file://$PROJECT_DIR$/src/com/inventoryManagementSystem/CSVHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+            <state relative-caret-position="912">
+              <caret line="81" column="13" lean-forward="true" selection-start-line="69" selection-start-column="12" selection-end-line="81" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -179,7 +175,6 @@
         <option value="$PROJECT_DIR$/src/com/inventoryManagementSystem/UserGroup/UserGroup.java" />
         <option value="$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/CommandHelper.java" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/src/com/inventoryManagementSystem/IMSController.java" />
         <option value="$PROJECT_DIR$/src/com/inventoryManagementSystem/Staff.java" />
         <option value="$PROJECT_DIR$/src/com/inventoryManagementSystem/UserGroup.java" />
         <option value="$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/Logout.java" />
@@ -188,12 +183,14 @@
         <option value="$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/ChangePassword.java" />
         <option value="$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/CreateNewUser.java" />
         <option value="$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/Login.java" />
-        <option value="$PROJECT_DIR$/src/com/inventoryManagementSystem/Main.java" />
         <option value="$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/RemoveUser.java" />
         <option value="$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/UpdateUserGroup.java" />
         <option value="$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/ViewProfile.java" />
         <option value="$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/ListAllUser.java" />
         <option value="$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/IMSCommand.java" />
+        <option value="$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/ListAllActions.java" />
+        <option value="$PROJECT_DIR$/src/com/inventoryManagementSystem/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/inventoryManagementSystem/IMSController.java" />
       </list>
     </option>
   </component>
@@ -240,13 +237,6 @@
               <item name="inventoryManagementSystem" type="462c0819:PsiDirectoryNode" />
               <item name="Command" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="cs3343-software-engeering-practice-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cs3343-software-engeering-practice-project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="inventoryManagementSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="Data" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -257,7 +247,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572971309099" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572971558344" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15234375" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -310,12 +300,12 @@
       <workItem from="1572766098550" duration="22498000" />
       <workItem from="1572879321080" duration="4707000" />
       <workItem from="1572961996174" duration="7755000" />
-      <workItem from="1572970567453" duration="741000" />
+      <workItem from="1572970567453" duration="976000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37421000" />
+    <option name="totallyTimeSpent" value="37656000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1447" y="-1041" width="1166" height="2022" extended-state="6" />
@@ -377,18 +367,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/inventoryManagementSystem/IMSController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="35" column="32" lean-forward="true" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#457#458#0" expanded="true" />
-            <element signature="e#491#492#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/inventoryManagementSystem/Staff.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
@@ -427,16 +405,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/inventoryManagementSystem/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="34" column="49" lean-forward="true" selection-start-line="34" selection-start-column="49" selection-end-line="34" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/UpdateUserGroup.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
@@ -468,13 +436,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/Login.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="18" column="27" lean-forward="true" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/RemoveUser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -499,6 +460,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/IMSCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="29" lean-forward="true" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/ListAllUser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
@@ -510,10 +478,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/IMSCommand.java">
+    <entry file="file://$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/Login.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+        <state relative-caret-position="171">
+          <caret line="18" column="27" lean-forward="true" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/inventoryManagementSystem/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/ListAllActions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="21" column="89" selection-start-line="21" selection-start-column="69" selection-end-line="21" selection-end-column="89" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/inventoryManagementSystem/IMSController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="23" column="11" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
