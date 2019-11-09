@@ -3,8 +3,6 @@ package com.inventoryManagementSystem;
 import com.inventoryManagementSystem.Command.ListAllActions;
 import com.inventoryManagementSystem.Command.Login;
 
-import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
         while (true) {
