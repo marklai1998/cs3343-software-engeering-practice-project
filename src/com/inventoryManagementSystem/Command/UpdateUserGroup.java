@@ -1,7 +1,7 @@
 package com.inventoryManagementSystem.Command;
 
-import com.inventoryManagementSystem.CSVHelper;
 import com.inventoryManagementSystem.DisplayHelper;
+import com.inventoryManagementSystem.Staff;
 import com.inventoryManagementSystem.UserGroup;
 
 import java.util.Scanner;
@@ -19,10 +19,9 @@ public class UpdateUserGroup implements IMSCommand {
         DisplayHelper.printHeader();
         int id = getId();
         int newGroupId = getGroupId();
-        CSVHelper users = new CSVHelper("/com/inventoryManagementSystem/Data/users.csv");
-        String[] matcher = {Integer.toString(id), null, null, null};
-        String[] update = {Integer.toString(id), null, null, Integer.toString(newGroupId)};
-        users.findOneAndUpdate(matcher, update);
+
+        Staff.setUserGroup(id, newGroupId);
+
         System.out.println("Success!");
         DisplayHelper.pressEnterToContinue();
         DisplayHelper.cls();
@@ -35,9 +34,7 @@ public class UpdateUserGroup implements IMSCommand {
                 Scanner scan = new Scanner(System.in);
                 System.out.println("User id: ");
                 int id = scan.nextInt();
-                String[] matcher = {Integer.toString(id), null, null, null};
-                CSVHelper users = new CSVHelper("/com/inventoryManagementSystem/Data/users.csv");
-                if (users.findOne(matcher) == null) {
+                if (Staff.getStaff(id)== null) {
                     System.out.println("id doesn't exist!");
                     DisplayHelper.pressEnterToContinue();
                 } else return id;

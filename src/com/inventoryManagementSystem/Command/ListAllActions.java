@@ -15,6 +15,7 @@ public class ListAllActions implements IMSCommand {
     }
 
     public void execute() {
+        DisplayHelper.cls();
         DisplayHelper.printHeader();
 
         System.out.println("Please select action:");
@@ -28,7 +29,6 @@ public class ListAllActions implements IMSCommand {
         System.out.print("Action number: ");
         int actionNumber = getActionNumber();
         IMSController.getInstance().run(availableCommands[actionNumber - 1]);
-        DisplayHelper.cls();
     }
 
     private int getActionNumber() {

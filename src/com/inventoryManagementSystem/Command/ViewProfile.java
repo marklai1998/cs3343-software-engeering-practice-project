@@ -2,8 +2,6 @@ package com.inventoryManagementSystem.Command;
 
 import com.inventoryManagementSystem.*;
 
-import java.util.Scanner;
-
 public class ViewProfile implements IMSCommand {
     public int getMinPermission() {
         return 0;

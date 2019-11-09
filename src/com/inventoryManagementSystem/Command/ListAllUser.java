@@ -1,11 +1,7 @@
 package com.inventoryManagementSystem.Command;
 
-import com.inventoryManagementSystem.CSVHelper;
 import com.inventoryManagementSystem.DisplayHelper;
-import com.inventoryManagementSystem.UserGroup;
-
-import java.util.ArrayList;
-import java.util.Scanner;
+import com.inventoryManagementSystem.Staff;
 
 public class ListAllUser implements IMSCommand {
     public int getMinPermission() {
@@ -17,18 +13,15 @@ public class ListAllUser implements IMSCommand {
     }
 
     public void execute() {
+        DisplayHelper.cls();
         DisplayHelper.printHeader();
-        CSVHelper users = new CSVHelper("/com/inventoryManagementSystem/Data/users.csv");
-        ArrayList<String[]> allData = users.getCsvBuffer();
-        for (String[] rowData : allData) {
-            UserGroup group = UserGroup.getUserGroup(Integer.parseInt(rowData[3]));
-            System.out.println("User id: " + rowData[0]);
-            System.out.println("Username: " + rowData[1]);
-            System.out.println("User group: " + group + "(" + group.getGroupId() + ")");
+        Staff[] staffs = Staff.getAllStaffs();
+        for (Staff staff : staffs) {
+            System.out.println("User id: " + staff.getId());
+            System.out.println("Username: " + staff.getName());
+            System.out.println("User group: " + staff.getUserGroup() + "(" + staff.getUserGroup().getGroupId() + ")");
             System.out.println();
         }
         DisplayHelper.pressEnterToContinue();
-        DisplayHelper.cls();
-
     }
 }

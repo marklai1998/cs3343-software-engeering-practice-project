@@ -1,8 +1,7 @@
 package com.inventoryManagementSystem.Command;
 
-import com.inventoryManagementSystem.CSVHelper;
 import com.inventoryManagementSystem.DisplayHelper;
-import com.inventoryManagementSystem.UserGroup;
+import com.inventoryManagementSystem.Staff;
 
 import java.util.Scanner;
 
@@ -16,14 +15,15 @@ public class RemoveUser implements IMSCommand {
     }
 
     public void execute() {
+        DisplayHelper.cls();
         DisplayHelper.printHeader();
         int id = getId();
-        CSVHelper users = new CSVHelper("/com/inventoryManagementSystem/Data/users.csv");
-        String[] matcher = {Integer.toString(id), null, null, null};
-        users.findOneAndRemove(matcher);
+
+        Staff.removeStaff(id);
+
         System.out.println("Success!");
         DisplayHelper.pressEnterToContinue();
-        DisplayHelper.cls();
+
     }
 
     private static int getId() {
@@ -32,9 +32,7 @@ public class RemoveUser implements IMSCommand {
                 Scanner scan = new Scanner(System.in);
                 System.out.println("User id: ");
                 int id = scan.nextInt();
-                String[] matcher = {Integer.toString(id), null, null, null};
-                CSVHelper users = new CSVHelper("/com/inventoryManagementSystem/Data/users.csv");
-                if (users.findOne(matcher) == null) {
+                if (Staff.getStaff(id) == null) {
                     System.out.println("id doesn't exist!");
                     DisplayHelper.pressEnterToContinue();
                 } else return id;
