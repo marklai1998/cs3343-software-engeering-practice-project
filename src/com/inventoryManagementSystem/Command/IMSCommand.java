@@ -6,10 +6,11 @@ public interface IMSCommand {
             new ListAllActions(),
             new ViewProfile(),
             new ChangePassword(),
-            new ListAllUser(),
+            new ListAllUsers(),
             new UpdateUserGroup(),
             new CreateNewUser(),
             new RemoveUser(),
+            new ListAllProducts(),
             new Logout()
     };
 

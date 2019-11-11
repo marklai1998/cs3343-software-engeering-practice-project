@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="65899b40-561c-4c0a-99ae-9c2fe98c421e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Data/product.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/ListAllUsers.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/ChangePassword.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/ChangePassword.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/CreateNewUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/CreateNewUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/IMSCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/IMSCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/ListAllActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/ListAllActions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/ListAllUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/ListAllProducts.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -110,7 +109,7 @@
       <workItem from="1573466244359" duration="526000" />
       <workItem from="1573466840426" duration="714000" />
       <workItem from="1573467892036" duration="2697000" />
-      <workItem from="1573477258724" duration="391000" />
+      <workItem from="1573477258724" duration="3302000" />
     </task>
     <servers />
   </component>

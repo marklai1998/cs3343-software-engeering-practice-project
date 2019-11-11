@@ -11,7 +11,7 @@ public class ListAllActions implements IMSCommand {
     }
 
     public String getDescription() {
-        return "List all Actions";
+        return "List all actions";
     }
 
     public void execute() {

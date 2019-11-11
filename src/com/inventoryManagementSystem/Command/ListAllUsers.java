@@ -3,13 +3,13 @@ package com.inventoryManagementSystem.Command;
 import com.inventoryManagementSystem.DisplayHelper;
 import com.inventoryManagementSystem.Staff;
 
-public class ListAllUser implements IMSCommand {
+public class ListAllUsers implements IMSCommand {
     public int getMinPermission() {
         return 2;
     }
 
     public String getDescription() {
-        return "List all user";
+        return "List all users";
     }
 
     public void execute() {
