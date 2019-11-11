@@ -23,6 +23,13 @@ public class ChangePassword implements IMSCommand {
             System.out.println("New password: ");
             String password = scan.nextLine();
 
+
+            if (password.equals("")) {
+                System.out.println("New password cannot be empty!");
+                DisplayHelper.pressEnterToContinue();
+                continue;
+            }
+
             if (password.equals(IMSController.getInstance().getStaff().getPassword())) {
                 System.out.println("New password cannot be the same as the original!");
                 DisplayHelper.pressEnterToContinue();

@@ -34,6 +34,7 @@ public class CreateNewUser implements IMSCommand {
                 Scanner scan = new Scanner(System.in);
                 System.out.println("User id: ");
                 int id = scan.nextInt();
+
                 if (Staff.getStaff(id) != null) {
                     System.out.println("id already exist!");
                     DisplayHelper.pressEnterToContinue();
@@ -50,6 +51,13 @@ public class CreateNewUser implements IMSCommand {
             Scanner scan = new Scanner(System.in);
             System.out.println("Username: ");
             String username = scan.nextLine();
+
+            if (username.equals("")) {
+                System.out.println("Username cannot be empty!");
+                DisplayHelper.pressEnterToContinue();
+                continue;
+            }
+
             if (Staff.getStaff(username) != null) {
                 System.out.println("User already exist!");
                 DisplayHelper.pressEnterToContinue();
@@ -58,9 +66,18 @@ public class CreateNewUser implements IMSCommand {
     }
 
     private static String getPassword() {
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Password: ");
-        return scan.nextLine();
+        while (true) {
+            Scanner scan = new Scanner(System.in);
+            System.out.println("Password: ");
+            String password = scan.nextLine();
+
+            if (password.equals("")) {
+                System.out.println("Password cannot be empty!");
+                DisplayHelper.pressEnterToContinue();
+                continue;
+            }
+            return password;
+        }
     }
 
     private static int getGroupId() {
