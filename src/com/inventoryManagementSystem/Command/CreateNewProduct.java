@@ -64,7 +64,7 @@ public class CreateNewProduct implements IMSCommand {
             }
 
             if (Product.getProduct(productName) != null) {
-                System.out.println("User already exist!");
+                System.out.println("Product already exist!");
                 DisplayHelper.pressEnterToContinue();
             } else return productName;
         }
@@ -74,14 +74,14 @@ public class CreateNewProduct implements IMSCommand {
         while (true) {
             Scanner scan = new Scanner(System.in);
             System.out.println("Description: ");
-            String productName = scan.nextLine();
+            String description = scan.nextLine();
 
-            if (productName.equals("")) {
+            if (description.equals("")) {
                 System.out.println("Description cannot be empty!");
                 DisplayHelper.pressEnterToContinue();
                 continue;
             }
-            return productName;
+            return description;
         }
     }
 

@@ -80,4 +80,10 @@ public class Product {
         if (matchedData == null) return null;
         return new Product(Integer.parseInt(matchedData[0]), matchedData[1], matchedData[2], Integer.parseInt(matchedData[3]), Integer.parseInt(matchedData[4]), Integer.parseInt(matchedData[5]));
     }
+
+    public static void updateProduct(Product product) {
+        String[] matcher = {Integer.toString(product.getId()), null, null, null, null, null};
+        String[] update = {null, product.getName(), product.getDescription(), Double.toString(product.getPrice()), Double.toString(product.getCost()), Integer.toString(product.getStock())};
+        productData.findOneAndUpdate(matcher, update);
+    }
 }

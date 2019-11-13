@@ -64,7 +64,7 @@ public class Staff {
 
     public static void setUserGroup(int id, int grpupId) {
         String[] matcher = {Integer.toString(id), null, null, null};
-        String[] update = {Integer.toString(id), null, null, Integer.toString(grpupId)};
+        String[] update = {null, null, null, Integer.toString(grpupId)};
         staffData.findOneAndUpdate(matcher, update);
     }
 
