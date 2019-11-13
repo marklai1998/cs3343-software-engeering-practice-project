@@ -10,7 +10,6 @@ public class Product {
     private double cost;
     private int stock;
     private static CSVHelper productData = new CSVHelper("/com/inventoryManagementSystem/Data/product.csv");
-    ;
 
     public Product(int id, String name, String description, double price, double cost, int stock) {
         this.cost = cost;
@@ -52,10 +51,21 @@ public class Product {
         Product[] products = new Product[allData.size()];
         for (int i = 0; i < allData.size(); i++) {
             String[] productData = allData.get(i);
-            Product staff = new Product(Integer.parseInt(productData[0]), productData[1], productData[2], Integer.parseInt(productData[3]), Integer.parseInt(productData[4]), Integer.parseInt(productData[5]));
-            products[i] = staff;
+            Product product = new Product(Integer.parseInt(productData[0]), productData[1], productData[2], Integer.parseInt(productData[3]), Integer.parseInt(productData[4]), Integer.parseInt(productData[5]));
+            products[i] = product;
         }
         return products;
     }
 
+    public static void removeProduct(int id) {
+        String[] matcher = {Integer.toString(id), null, null, null, null, null};
+        productData.findOneAndRemove(matcher);
+    }
+
+    public static Product getProduct(int id) {
+        String[] matcher = {Integer.toString(id), null, null, null, null, null};
+        String[] matchedData = productData.findOne(matcher);
+        if (matchedData == null) return null;
+        return new Product(Integer.parseInt(matchedData[0]), matchedData[1], matchedData[2], Integer.parseInt(matchedData[3]), Integer.parseInt(matchedData[4]), Integer.parseInt(matchedData[5]));
+    }
 }

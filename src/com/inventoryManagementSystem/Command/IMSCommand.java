@@ -11,6 +11,7 @@ public interface IMSCommand {
             new CreateNewUser(),
             new RemoveUser(),
             new ListAllProducts(),
+            new RemoveProduct(),
             new Logout()
     };
 
