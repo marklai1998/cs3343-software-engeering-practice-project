@@ -51,10 +51,15 @@ public class Product {
         Product[] products = new Product[allData.size()];
         for (int i = 0; i < allData.size(); i++) {
             String[] productData = allData.get(i);
-            Product product = new Product(Integer.parseInt(productData[0]), productData[1], productData[2], Integer.parseInt(productData[3]), Integer.parseInt(productData[4]), Integer.parseInt(productData[5]));
+            Product product = new Product(Integer.parseInt(productData[0]), productData[1], productData[2], Double.parseDouble(productData[3]), Double.parseDouble(productData[4]), Integer.parseInt(productData[5]));
             products[i] = product;
         }
         return products;
+    }
+
+    public static void addProduct(Product product) {
+        String[] newProduct = {Integer.toString(product.getId()), product.getName(), product.getDescription(), Double.toString(product.getPrice()), Double.toString(product.getCost()), Integer.toString(product.getStock())};
+        productData.insertOne(newProduct);
     }
 
     public static void removeProduct(int id) {
@@ -64,6 +69,13 @@ public class Product {
 
     public static Product getProduct(int id) {
         String[] matcher = {Integer.toString(id), null, null, null, null, null};
+        String[] matchedData = productData.findOne(matcher);
+        if (matchedData == null) return null;
+        return new Product(Integer.parseInt(matchedData[0]), matchedData[1], matchedData[2], Integer.parseInt(matchedData[3]), Integer.parseInt(matchedData[4]), Integer.parseInt(matchedData[5]));
+    }
+
+    public static Product getProduct(String name) {
+        String[] matcher = {null, name, null, null, null, null};
         String[] matchedData = productData.findOne(matcher);
         if (matchedData == null) return null;
         return new Product(Integer.parseInt(matchedData[0]), matchedData[1], matchedData[2], Integer.parseInt(matchedData[3]), Integer.parseInt(matchedData[4]), Integer.parseInt(matchedData[5]));
