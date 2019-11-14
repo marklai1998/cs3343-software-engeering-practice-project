@@ -45,7 +45,6 @@ public class UpdateProduct implements IMSCommand {
                     DisplayHelper.pressEnterToContinue();
                 } else return id;
             } catch (Exception e) {
-                System.out.println(e);
                 System.out.println("Invalid input! id must be a number");
                 DisplayHelper.pressEnterToContinue();
             }
