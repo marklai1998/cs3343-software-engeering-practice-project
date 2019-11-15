@@ -8,7 +8,6 @@ public class IMSController {
     private static IMSController instance = new IMSController();
     private Staff staff = null;
 
-
     public static IMSController getInstance() {
         return instance;
     }

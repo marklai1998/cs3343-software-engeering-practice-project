@@ -16,6 +16,7 @@ public interface IMSCommand {
             new RemoveProduct(),
             new CreateNewPriceChange(),
             new ListAllPriceChange(),
+            new UpdatePriceChange(),
             new RemovePriceChange(),
             new Logout()
     };

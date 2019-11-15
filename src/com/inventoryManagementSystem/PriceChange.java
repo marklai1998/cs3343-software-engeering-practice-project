@@ -104,4 +104,11 @@ public class PriceChange {
         String[] matcher = {Integer.toString(id), null, null, null, null};
         priceChangeData.findOneAndRemove(matcher);
     }
+
+    public static void updatePriceChange(PriceChange priceChange) {
+        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        String[] matcher = {Integer.toString(priceChange.getId()), null, null, null, null};
+        String[] update = {null, Integer.toString(priceChange.getProductId()), Double.toString(priceChange.getChangeRate()), dateFormat.format(priceChange.getStartDate()), dateFormat.format(priceChange.getEndDate())};
+        priceChangeData.findOneAndUpdate(matcher, update);
+    }
 }
