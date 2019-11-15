@@ -23,6 +23,7 @@ public class ListAllPriceChange implements IMSCommand {
         DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
 
         for (PriceChange priceChange : priceChanges) {
+            System.out.println("id: " + priceChange.getId());
             System.out.println("Product id: " + priceChange.getProductId());
             System.out.println("Change rate: " + priceChange.getChangeRate());
             System.out.println("Start date: " + dateFormat.format(priceChange.getStartDate()));
