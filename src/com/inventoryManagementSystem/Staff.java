@@ -39,6 +39,10 @@ public class Staff {
         return id;
     }
 
+    public static void changeDataSet(CSVHelper newDataSet) {
+        staffData = newDataSet;
+    }
+
     public static void addStaff(Staff staff) {
         String[] newUser = {Integer.toString(staff.getId()), staff.getName(), staff.getPassword(), Integer.toString(staff.getUserGroup().getGroupId())};
         staffData.insertOne(newUser);

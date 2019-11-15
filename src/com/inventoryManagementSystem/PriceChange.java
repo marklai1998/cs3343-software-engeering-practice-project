@@ -41,6 +41,10 @@ public class PriceChange {
         return changeRate;
     }
 
+    public static void changeDataSet(CSVHelper newDataSet) {
+        priceChangeData = newDataSet;
+    }
+
     public static void addPriceChange(PriceChange priceChange) {
         DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
         String[] newPriceChange = {Integer.toString(priceChange.getId()), Integer.toString(priceChange.getProductId()), Double.toString(priceChange.getChangeRate()), dateFormat.format(priceChange.getStartDate()), dateFormat.format(priceChange.getEndDate())};

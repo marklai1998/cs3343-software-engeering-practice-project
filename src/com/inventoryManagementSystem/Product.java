@@ -44,6 +44,10 @@ public class Product {
         return name;
     }
 
+    public static void changeDataSet(CSVHelper newDataSet) {
+        productData = newDataSet;
+    }
+
     public static Product[] getAllProducts() {
         DisplayHelper.printHeader();
         ArrayList<String[]> allData = productData.getCsvBuffer();
