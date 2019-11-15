@@ -1,5 +1,6 @@
 package com.inventoryManagementSystem;
 
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -40,6 +41,12 @@ public class PriceChange {
         return changeRate;
     }
 
+    public static void addPriceChange(PriceChange priceChange) {
+        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        String[] newPriceChange = {Integer.toString(priceChange.getId()), Integer.toString(priceChange.getProductId()), Double.toString(priceChange.getChangeRate()), dateFormat.format(priceChange.getStartDate()), dateFormat.format(priceChange.getEndDate())};
+        priceChangeData.insertOne(newPriceChange);
+    }
+
     public static PriceChange[] getAllPriceChange() {
         try {
             DisplayHelper.printHeader();
@@ -56,6 +63,18 @@ public class PriceChange {
 //            Do nothing
         }
         return new PriceChange[0];
+    }
+
+    public static PriceChange getPriceChange(int id) {
+        try {
+            String[] matcher = {Integer.toString(id), null, null, null, null};
+            String[] matchedData = priceChangeData.findOne(matcher);
+            if (matchedData == null) return null;
+            return new PriceChange(Integer.parseInt(matchedData[0]), Integer.parseInt(matchedData[1]), Double.parseDouble(matchedData[2]), new SimpleDateFormat("dd/MM/yyyy").parse(matchedData[3]), new SimpleDateFormat("dd/MM/yyyy").parse(matchedData[4]));
+        } catch (Exception e) {
+//            Do nothing
+        }
+        return null;
     }
 
     public static PriceChange[] getPriceChange(Product product) {

@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="65899b40-561c-4c0a-99ae-9c2fe98c421e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/CreateNewPriceChange.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/ListAllPriceChange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/ListAllPriceChange.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Data/priceChange.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Data/priceChange.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/IMSCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/IMSCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/inventoryManagementSystem/PriceChange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inventoryManagementSystem/PriceChange.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -107,7 +107,7 @@
       <workItem from="1573635817095" duration="6804000" />
       <workItem from="1573749768221" duration="55000" />
       <workItem from="1573749839738" duration="3595000" />
-      <workItem from="1573801314290" duration="3503000" />
+      <workItem from="1573801314290" duration="4962000" />
     </task>
     <servers />
   </component>
