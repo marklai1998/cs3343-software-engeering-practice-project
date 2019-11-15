@@ -99,4 +99,9 @@ public class PriceChange {
         }
         return new PriceChange[0];
     }
+
+    public static void removePriceChange(int id) {
+        String[] matcher = {Integer.toString(id), null, null, null, null};
+        priceChangeData.findOneAndRemove(matcher);
+    }
 }
