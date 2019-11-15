@@ -20,7 +20,7 @@ public class ListAllActions implements IMSCommand {
 
         System.out.println("Please select action:");
         System.out.println();
-        IMSCommand[] availableCommands = IMSController.getInstance().getAvailableCommands();
+        IMSCommand[] availableCommands = IMSController.getInstance().getAvailableCommands(IMSCommand.allCommands);
         for (int i = 0; i < availableCommands.length; i++) {
             System.out.println((i + 1) + ". " + availableCommands[i].getDescription());
         }
