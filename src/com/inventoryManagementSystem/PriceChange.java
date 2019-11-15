@@ -51,4 +51,27 @@ public class PriceChange {
         }
         return new PriceChange[0];
     }
+
+    public static PriceChange[] getPriceChange(Product product) {
+        try {
+            String[] matcher = {Integer.toString(product.getId()), null, null, null};
+            String[][] result = priceChangeData.find(matcher);
+
+            Date now = new Date(System.currentTimeMillis());
+            ArrayList<PriceChange> allPriceChange = new ArrayList<>();
+            for (String[] productData : result) {
+                Date startDate = new SimpleDateFormat("dd/MM/yyyy").parse(productData[2]);
+                Date endDate = new SimpleDateFormat("dd/MM/yyyy").parse(productData[3]);
+
+                if (startDate.before(now) && endDate.after(now)) {
+                    PriceChange priceChange = new PriceChange(Integer.parseInt(productData[0]), Double.parseDouble(productData[1]), startDate, endDate);
+                    allPriceChange.add(priceChange);
+                }
+            }
+            return allPriceChange.toArray(new PriceChange[0]);
+        } catch (Exception e) {
+//            Do nothing
+        }
+        return new PriceChange[0];
+    }
 }

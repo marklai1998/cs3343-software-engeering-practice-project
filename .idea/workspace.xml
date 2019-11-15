@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="65899b40-561c-4c0a-99ae-9c2fe98c421e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/ListAllPriceChange.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Data/priceChange.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/inventoryManagementSystem/PriceChange.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/IMSCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/IMSCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/UpdateProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/UpdateProduct.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/inventoryManagementSystem/CSVHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inventoryManagementSystem/CSVHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/ListAllProducts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/ListAllProducts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/inventoryManagementSystem/PriceChange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inventoryManagementSystem/PriceChange.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -108,7 +106,8 @@
       <workItem from="1573477258724" duration="3302000" />
       <workItem from="1573635817095" duration="6804000" />
       <workItem from="1573749768221" duration="55000" />
-      <workItem from="1573749839738" duration="3291000" />
+      <workItem from="1573749839738" duration="3595000" />
+      <workItem from="1573801314290" duration="2714000" />
     </task>
     <servers />
   </component>

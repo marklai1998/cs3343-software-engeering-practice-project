@@ -1,5 +1,7 @@
 package com.inventoryManagementSystem;
 
+import com.inventoryManagementSystem.Command.IMSCommand;
+
 import java.io.*;
 import java.net.URL;
 import java.util.ArrayList;
@@ -53,6 +55,15 @@ public class CSVHelper {
             mergedRow[i] = newRow[i] == null ? originalRow[i] : newRow[i];
         }
         return mergedRow;
+    }
+
+    public String[][] find(String[] matcher) {
+        ArrayList<String[]> Buffer = getCsvBuffer();
+        ArrayList<String[]> result = new ArrayList<>();
+        for (String[] rowData : Buffer) {
+            if (isRowMatch(rowData, matcher)) result.add(rowData);
+        }
+        return result.toArray(new String[0][0]);
     }
 
     public String[] findOne(String[] matcher) {
