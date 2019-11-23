@@ -75,7 +75,7 @@ public class Staff {
     public static Staff getStaff(int id) {
         String[] matcher = {Integer.toString(id), null, null, null};
         String[] matchedData = staffData.findOne(matcher);
-        if (staffData == null) return null;
+        if (matchedData == null) return null;
         return new Staff(Integer.parseInt(matchedData[0]), matchedData[1], matchedData[2], Integer.parseInt(matchedData[3]));
     }
 

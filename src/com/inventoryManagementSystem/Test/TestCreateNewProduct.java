@@ -36,8 +36,8 @@ public class TestCreateNewProduct {
 	@Test
 	public void testCreateNewProductExecute() {
 //
-		CreateNewProduct CreateNewProductCmd = new CreateNewProduct();
-		CreateNewProductCmd.execute();
+//		CreateNewProduct CreateNewProductCmd = new CreateNewProduct();
+//		CreateNewProductCmd.execute();
 //
 //		ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 //
