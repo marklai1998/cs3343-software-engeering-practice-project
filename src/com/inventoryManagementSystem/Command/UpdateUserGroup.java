@@ -17,8 +17,9 @@ public class UpdateUserGroup implements IMSCommand {
 
     public void execute() {
         DisplayHelper.printHeader();
-        int id = getId();
-        int newGroupId = getGroupId();
+        Scanner scan = new Scanner(System.in);
+        int id = getId(scan);
+        int newGroupId = getGroupId(scan);
 
         Staff.setUserGroup(id, newGroupId);
 
@@ -28,10 +29,9 @@ public class UpdateUserGroup implements IMSCommand {
 
     }
 
-    private static int getId() {
+    private static int getId(Scanner scan) {
         while (true) {
             try {
-                Scanner scan = new Scanner(System.in);
                 System.out.println("User id: ");
                 int id = scan.nextInt();
                 if (Staff.getStaff(id)== null) {
@@ -45,10 +45,9 @@ public class UpdateUserGroup implements IMSCommand {
         }
     }
 
-    private static int getGroupId() {
+    private static int getGroupId(Scanner scan) {
         while (true) {
             try {
-                Scanner scan = new Scanner(System.in);
                 System.out.println("Group id: ");
                 int groupId = scan.nextInt();
                 if (UserGroup.getUserGroup(groupId) == null) {

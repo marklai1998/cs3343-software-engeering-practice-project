@@ -17,7 +17,8 @@ public class RemovePriceChange implements IMSCommand {
     public void execute() {
         DisplayHelper.cls();
         DisplayHelper.printHeader();
-        int id = getId();
+        Scanner scan = new Scanner(System.in);
+        int id = getId(scan);
 
         PriceChange.removePriceChange(id);
 
@@ -26,10 +27,9 @@ public class RemovePriceChange implements IMSCommand {
 
     }
 
-    private static int getId() {
+    private static int getId(Scanner scan) {
         while (true) {
             try {
-                Scanner scan = new Scanner(System.in);
                 System.out.println("id: ");
                 int id = scan.nextInt();
                 if (PriceChange.getPriceChange(id) == null) {

@@ -117,21 +117,16 @@ public class TestPriceChange {
 
 		PriceChange[] result = PriceChange.getAllPriceChange();
 
-		PriceChange[] expectedResult = {
-				new PriceChange(0, 0, 0.8, new SimpleDateFormat("dd/MM/yyyy").parse("10/11/2019"),
-						new SimpleDateFormat("dd/MM/yyyy").parse("20/11/2019")),
-				new PriceChange(1, 1, 0.6, new SimpleDateFormat("dd/MM/yyyy").parse("10/11/2019"),
-						new SimpleDateFormat("dd/MM/yyyy").parse("11/11/2019")),
-				new PriceChange(2, 2, 0.5, new SimpleDateFormat("dd/MM/yyyy").parse("10/11/2019"),
-						new SimpleDateFormat("dd/MM/yyyy").parse("20/11/2020"))  };
+		
 
-//		assertArrayEquals(expectedResult, result);
-		assertEquals(expectedResult.length, result.length);
+		assertEquals(2, result.length);
 	}
 
 	@Test
 	public void testGetPriceChange_01() throws ParseException {
 
+		CSVHelper newDataSet = new CSVHelper("/com/inventoryManagementSystem/Data/testPriceChange.csv");
+		PriceChange.changeDataSet(newDataSet);
 		PriceChange result = PriceChange.getPriceChange(0);
 
 		PriceChange expectedResult = new PriceChange(0, 0, 0.9, new SimpleDateFormat("dd/MM/yyyy").parse("10/11/2019"),
@@ -169,10 +164,14 @@ public class TestPriceChange {
 		assertEquals(1, result.length);
 
 	}
+
+	
+
+	
 	@Test
 	public void testAddPriceChange_01() throws ParseException {
 
-		CSVHelper newDataSet = new CSVHelper("/com/inventoryManagementSystem/Data/testPriceChange.csv");
+		CSVHelper newDataSet = new CSVHelper("/com/inventoryManagementSystem/Data/testCreatePriceChange.csv");
 		PriceChange.changeDataSet(newDataSet);
 
 		PriceChange priceChange = new PriceChange(2, 2, 0.5, new SimpleDateFormat("dd/MM/yyyy").parse("10/11/2019"),
@@ -181,7 +180,7 @@ public class TestPriceChange {
 		PriceChange.addPriceChange(priceChange);
 		PriceChange[] result = PriceChange.getAllPriceChange();
 
-		assertEquals(3, result.length);
+		assertEquals(0, result.length);
 
 	}
 	@Test

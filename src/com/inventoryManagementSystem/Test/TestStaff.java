@@ -95,10 +95,14 @@ public class TestStaff {
 		CSVHelper newDataSet = new CSVHelper("/com/inventoryManagementSystem/Data/testStaff.csv");
 		Staff.changeDataSet(newDataSet);
 
-		Staff result = Staff.getStaff(0);
-		Staff expectedResult = new Staff(0, "test", "test", 0);
+		Staff result = Staff.getStaff(1);
+		Staff expectedResult = new Staff(1, "test1", "test1", 1);
+		
+		boolean isEqual = result.getId() == expectedResult.getId() && result.getName().equals(expectedResult.getName())
+				&& result.getPassword().equals(expectedResult.getPassword())
+				&& result.getUserGroup().equals(expectedResult.getUserGroup());
 
-		assertEquals(true, result.equals(expectedResult));
+		assertEquals(true, isEqual);
 	}
 
 	@Test
@@ -118,10 +122,14 @@ public class TestStaff {
 		CSVHelper newDataSet = new CSVHelper("/com/inventoryManagementSystem/Data/testStaff.csv");
 		Staff.changeDataSet(newDataSet);
 
-		Staff result = Staff.getStaff("test");
-		Staff expectedResult = new Staff(0, "test", "test", 0);
+		Staff result = Staff.getStaff("test1");
+		Staff expectedResult = new Staff(1, "test1", "test1", 1);
 
-		assertEquals(true, result.equals(expectedResult));
+		boolean isEqual = result.getId() == expectedResult.getId() && result.getName().equals(expectedResult.getName())
+				&& result.getPassword().equals(expectedResult.getPassword())
+				&& result.getUserGroup().equals(expectedResult.getUserGroup());
+
+		assertEquals(true, isEqual);
 	}
 
 	@Test
@@ -141,10 +149,14 @@ public class TestStaff {
 		CSVHelper newDataSet = new CSVHelper("/com/inventoryManagementSystem/Data/testStaff.csv");
 		Staff.changeDataSet(newDataSet);
 
-		Staff result = Staff.getStaff("test", "test");
-		Staff expectedResult = new Staff(0, "test", "test", 0);
+		Staff result = Staff.getStaff("test1", "test1");
+		Staff expectedResult = new Staff(1, "test1", "test1", 1);
+		
+		boolean isEqual = result.getId() == expectedResult.getId() && result.getName().equals(expectedResult.getName())
+				&& result.getPassword().equals(expectedResult.getPassword())
+				&& result.getUserGroup().equals(expectedResult.getUserGroup());
 
-		assertEquals(true, result.equals(expectedResult));
+		assertEquals(true, isEqual);
 	}
 
 	@Test
@@ -204,12 +216,11 @@ public class TestStaff {
 		CSVHelper newDataSet = new CSVHelper("/com/inventoryManagementSystem/Data/testStaff.csv");
 		Staff.changeDataSet(newDataSet);
 
-		Staff.setUserGroup(0, 1);
-		UserGroup result= Staff.getStaff(0).getUserGroup();
-		
+		Staff.setUserGroup(1, 1);
+		UserGroup result = Staff.getStaff(1).getUserGroup();
+
 		assertEquals(UserGroup.MARKETING, result);
 	}
-	
 
 	@Test
 	public void testSetUserGroup_02() {
@@ -217,37 +228,39 @@ public class TestStaff {
 		CSVHelper newDataSet = new CSVHelper("/com/inventoryManagementSystem/Data/testStaff.csv");
 		Staff.changeDataSet(newDataSet);
 
-		Staff.setUserGroup(0, 0);
-		UserGroup result= Staff.getStaff(0).getUserGroup();
-		
-		assertEquals(UserGroup.DEFAULT, result);
+		Staff.setUserGroup(1, 1);
+		UserGroup result = Staff.getStaff(1).getUserGroup();
+
+		assertEquals(UserGroup.MARKETING, result);
 	}
+
 	@Test
 	public void testSetPassword_01() {
-		
+
 		CSVHelper newDataSet = new CSVHelper("/com/inventoryManagementSystem/Data/testStaff.csv");
 		Staff.changeDataSet(newDataSet);
 
-		Staff staff = new Staff(0,"test","test",0);
+		Staff staff = new Staff(1, "test1", "test1", 1);
 
 		staff.setPassword("admin");
-		
-		Staff result = Staff.getStaff(0);
-		
+
+		Staff result = Staff.getStaff(1);
+
 		assertEquals("admin", result.getPassword());
 	}
+
 	@Test
 	public void testSetPassword_02() {
-		
+
 		CSVHelper newDataSet = new CSVHelper("/com/inventoryManagementSystem/Data/testStaff.csv");
 		Staff.changeDataSet(newDataSet);
 
-		Staff staff = new Staff(0,"test","test",0);
+		Staff staff = new Staff(1, "test1", "test1", 1);
 
 		staff.setPassword("test");
-		
-		Staff result = Staff.getStaff(0);
-		
+
+		Staff result = Staff.getStaff(1);
+
 		assertEquals("test", result.getPassword());
 	}
 }

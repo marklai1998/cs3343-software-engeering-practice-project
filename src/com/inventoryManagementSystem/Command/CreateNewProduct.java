@@ -19,12 +19,13 @@ public class CreateNewProduct implements IMSCommand {
     public void execute() {
         DisplayHelper.cls();
         DisplayHelper.printHeader();
-        int id = getId();
-        String productName = getProductName();
-        String description = getProductDescription();
-        double price = getPrice();
-        double cost = getCost();
-        int stock = getStock();
+        Scanner scan = new Scanner(System.in);
+        int id = getId(scan);
+        String productName = getProductName(scan);
+        String description = getProductDescription(scan);
+        double price = getPrice(scan);
+        double cost = getCost(scan);
+        int stock = getStock(scan);
 
         Product newProduct = new Product(id, productName, description, price, cost, stock);
         Product.addProduct(newProduct);
@@ -33,27 +34,27 @@ public class CreateNewProduct implements IMSCommand {
         DisplayHelper.pressEnterToContinue();
     }
 
-    private static int getId() {
+    private static int getId(Scanner scan) {
         while (true) {
             try {
-                Scanner scan = new Scanner(System.in);
                 System.out.println("Product id: ");
                 int id = scan.nextInt();
 
                 if (Product.getProduct(id) != null) {
-                    System.out.println("id already exist!");
+                    System.out.println("id already exist!"); 
                     DisplayHelper.pressEnterToContinue();
                 } else return id;
             } catch (Exception e) {
+            	e.printStackTrace();
                 System.out.println("Invalid input! id must be a number");
                 DisplayHelper.pressEnterToContinue();
             }
         }
     }
 
-    private static String getProductName() {
+    private static String getProductName(Scanner scan) {
         while (true) {
-            Scanner scan = new Scanner(System.in);
+
             System.out.println("Product name: ");
             String productName = scan.nextLine();
 
@@ -70,9 +71,9 @@ public class CreateNewProduct implements IMSCommand {
         }
     }
 
-    private static String getProductDescription() {
+    private static String getProductDescription(Scanner scan) {
         while (true) {
-            Scanner scan = new Scanner(System.in);
+
             System.out.println("Description: ");
             String description = scan.nextLine();
 
@@ -85,10 +86,10 @@ public class CreateNewProduct implements IMSCommand {
         }
     }
 
-    private static double getPrice() {
+    private static double getPrice(Scanner scan) {
         while (true) {
             try {
-                Scanner scan = new Scanner(System.in);
+
                 System.out.println("Price: ");
                 return scan.nextDouble();
             } catch (Exception e) {
@@ -98,10 +99,10 @@ public class CreateNewProduct implements IMSCommand {
         }
     }
 
-    private static double getCost() {
+    private static double getCost(Scanner scan) {
         while (true) {
             try {
-                Scanner scan = new Scanner(System.in);
+
                 System.out.println("Cost: ");
                 return scan.nextDouble();
             } catch (Exception e) {
@@ -111,10 +112,10 @@ public class CreateNewProduct implements IMSCommand {
         }
     }
 
-    private static int getStock() {
+    private static int getStock(Scanner scan) {
         while (true) {
             try {
-                Scanner scan = new Scanner(System.in);
+
                 System.out.println("Stock: ");
                 return scan.nextInt();
             } catch (Exception e) {
