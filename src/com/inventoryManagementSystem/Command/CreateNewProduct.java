@@ -122,7 +122,13 @@ public class CreateNewProduct implements IMSCommand {
             try {
                 Scanner scan = new Scanner(System.in);
                 System.out.println("Stock: ");
-                return scan.nextInt();
+                int stock = scan.nextInt();
+                if (stock < 0) {
+                    System.out.println("Invalid input! Stock must be a positive number");
+                    DisplayHelper.pressEnterToContinue();
+                    continue;
+                }
+                return stock;
             } catch (Exception e) {
                 System.out.println("Invalid input! Stock must be a number");
                 DisplayHelper.pressEnterToContinue();
