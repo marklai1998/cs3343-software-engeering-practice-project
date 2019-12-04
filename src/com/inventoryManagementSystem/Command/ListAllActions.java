@@ -28,6 +28,11 @@ public class ListAllActions implements IMSCommand {
         DisplayHelper.printSeparationLine();
         System.out.print("Action number: ");
         int actionNumber = getActionNumber();
+        if (actionNumber <= 0 || actionNumber > availableCommands.length) {
+            System.out.println("Invalid input!");
+            DisplayHelper.pressEnterToContinue();
+            return;
+        }
         IMSController.getInstance().run(availableCommands[actionNumber - 1]);
     }
 

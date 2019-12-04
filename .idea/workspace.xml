@@ -3,11 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="65899b40-561c-4c0a-99ae-9c2fe98c421e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inventoryManagementSystem/PriceChange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inventoryManagementSystem/PriceChange.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Staff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Staff.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/ListAllActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/ListAllActions.java" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,6 +27,11 @@
     <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1TSyeDDCBJ7BQoW7gCuee4pEJYR" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -55,18 +57,6 @@
       <recent name="D:\cs3343-software-engeering-practice-project\src\com\inventoryManagementSystem\Data" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.inventoryManagementSystem.Main" />
@@ -83,6 +73,18 @@
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -108,6 +110,9 @@
       <workItem from="1573749768221" duration="55000" />
       <workItem from="1573749839738" duration="3595000" />
       <workItem from="1573801314290" duration="7049000" />
+      <workItem from="1575383657815" duration="67000" />
+      <workItem from="1575385658597" duration="613000" />
+      <workItem from="1575469284886" duration="2310000" />
     </task>
     <servers />
   </component>
@@ -126,6 +131,28 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="598" height="202" key="GridCell.Tab.0.bottom" timestamp="1575471598226">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state width="598" height="202" key="GridCell.Tab.0.bottom/-1440.-1034.1152.2016/0.0.2560.1040@0.0.2560.1040" timestamp="1575471598226" />
+    <state width="598" height="202" key="GridCell.Tab.0.center" timestamp="1575471598226">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state width="598" height="202" key="GridCell.Tab.0.center/-1440.-1034.1152.2016/0.0.2560.1040@0.0.2560.1040" timestamp="1575471598226" />
+    <state width="598" height="202" key="GridCell.Tab.0.left" timestamp="1575471598226">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state width="598" height="202" key="GridCell.Tab.0.left/-1440.-1034.1152.2016/0.0.2560.1040@0.0.2560.1040" timestamp="1575471598226" />
+    <state width="598" height="202" key="GridCell.Tab.0.right" timestamp="1575471598226">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state width="598" height="202" key="GridCell.Tab.0.right/-1440.-1034.1152.2016/0.0.2560.1040@0.0.2560.1040" timestamp="1575471598226" />
+    <state x="976" y="342" key="com.intellij.ide.util.TipDialog" timestamp="1575469285143">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="976" y="342" key="com.intellij.ide.util.TipDialog/-1440.-1034.1152.2016/0.0.2560.1040@0.0.2560.1040" timestamp="1575469285143" />
   </component>
   <component name="masterDetails">
     <states>
