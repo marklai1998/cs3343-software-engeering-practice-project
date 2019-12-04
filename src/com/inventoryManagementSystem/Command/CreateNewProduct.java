@@ -55,7 +55,7 @@ public class CreateNewProduct implements IMSCommand {
         while (true) {
             Scanner scan = new Scanner(System.in);
             System.out.println("Product name: ");
-            String productName = scan.nextLine().replaceAll("\\s+","");
+            String productName = scan.nextLine().replaceAll("\\s+", "");
 
             if (productName.equals("")) {
                 System.out.println("Product name cannot be empty!");
@@ -90,7 +90,13 @@ public class CreateNewProduct implements IMSCommand {
             try {
                 Scanner scan = new Scanner(System.in);
                 System.out.println("Price: ");
-                return scan.nextDouble();
+                double price = scan.nextDouble();
+                if (price < 0) {
+                    System.out.println("Invalid input! Price must be a positive number");
+                    DisplayHelper.pressEnterToContinue();
+                    continue;
+                }
+                return price;
             } catch (Exception e) {
                 System.out.println("Invalid input! Price must be a number");
                 DisplayHelper.pressEnterToContinue();
