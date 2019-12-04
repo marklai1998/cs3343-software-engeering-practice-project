@@ -55,7 +55,7 @@ public class CreateNewProduct implements IMSCommand {
         while (true) {
             Scanner scan = new Scanner(System.in);
             System.out.println("Product name: ");
-            String productName = scan.nextLine();
+            String productName = scan.nextLine().replaceAll("\\s+","");
 
             if (productName.equals("")) {
                 System.out.println("Product name cannot be empty!");
