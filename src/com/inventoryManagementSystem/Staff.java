@@ -1,5 +1,7 @@
 package com.inventoryManagementSystem;
 
+import com.inventoryManagementSystem.Command.Logout;
+
 import java.util.ArrayList;
 
 public class Staff {
@@ -7,7 +9,7 @@ public class Staff {
     private String name;
     private String password;
     private UserGroup userGroup;
-    private static CSVHelper staffData = new CSVHelper("/com/inventoryManagementSystem/Data/staff.csv");;
+    private static CSVHelper staffData = new CSVHelper("/com/inventoryManagementSystem/Data/staff.csv");
 
     public Staff(int id, String name, String password, int groupId) {
         this.id = id;
@@ -64,6 +66,10 @@ public class Staff {
     public static void removeStaff(int id) {
         String[] matcher = {Integer.toString(id), null, null, null};
         staffData.findOneAndRemove(matcher);
+        int loggedInUserId = IMSController.getInstance().getStaff().id;
+        if (id == loggedInUserId) {
+            IMSController.getInstance().run(new Logout());
+        }
     }
 
     public static void setUserGroup(int id, int grpupId) {
