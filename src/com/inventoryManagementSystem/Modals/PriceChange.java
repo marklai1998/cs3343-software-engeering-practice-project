@@ -1,6 +1,6 @@
 package com.inventoryManagementSystem.Modals;
 
-import com.inventoryManagementSystem.Utils.CSVHelper;
+import com.inventoryManagementSystem.Drivers.CSVReader;
 import com.inventoryManagementSystem.Utils.DisplayHelper;
 
 import java.text.DateFormat;
@@ -14,7 +14,7 @@ public class PriceChange {
     private double changeRate;
     private Date startDate;
     private Date endDate;
-    private static CSVHelper priceChangeData = new CSVHelper("/com/inventoryManagementSystem/Data/priceChange.csv");
+    private static CSVReader priceChangeData = new CSVReader("/com/inventoryManagementSystem/Data/priceChange.csv");
 
     public PriceChange(int id, int productId, double changeRate, Date startDate, Date endDate) {
         this.id = id;
@@ -44,7 +44,7 @@ public class PriceChange {
         return changeRate;
     }
 
-    public static void changeDataSet(CSVHelper newDataSet) {
+    public static void changeDataSet(CSVReader newDataSet) {
         priceChangeData = newDataSet;
     }
 

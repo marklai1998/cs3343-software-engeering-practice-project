@@ -1,6 +1,6 @@
 package com.inventoryManagementSystem.Modals;
 
-import com.inventoryManagementSystem.Utils.CSVHelper;
+import com.inventoryManagementSystem.Drivers.CSVReader;
 import com.inventoryManagementSystem.Utils.DisplayHelper;
 
 import java.util.ArrayList;
@@ -12,7 +12,7 @@ public class Product {
     private double price;
     private double cost;
     private int stock;
-    private static CSVHelper productData = new CSVHelper("/com/inventoryManagementSystem/Data/product.csv");
+    private static CSVReader productData = new CSVReader("/com/inventoryManagementSystem/Data/product.csv");
 
     public Product(int id, String name, String description, double price, double cost, int stock) {
         this.cost = cost;
@@ -47,7 +47,7 @@ public class Product {
         return name;
     }
 
-    public static void changeDataSet(CSVHelper newDataSet) {
+    public static void changeDataSet(CSVReader newDataSet) {
         productData = newDataSet;
     }
 

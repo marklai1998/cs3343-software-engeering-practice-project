@@ -1,13 +1,13 @@
-package com.inventoryManagementSystem.Utils;
+package com.inventoryManagementSystem.Drivers;
 
 import java.io.*;
 import java.net.URL;
 import java.util.ArrayList;
 
-public class CSVHelper {
+public class CSVReader {
     private String path;
 
-    public CSVHelper(String path) {
+    public CSVReader(String path) {
         URL url = getClass().getResource(path);
         this.path = url.getFile();
     }

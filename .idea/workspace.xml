@@ -2,32 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="65899b40-561c-4c0a-99ae-9c2fe98c421e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/ChangePassword.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Commands/ChangePassword.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/CreateNewPriceChange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Commands/CreateNewPriceChange.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/CreateNewProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Commands/CreateNewProduct.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/CreateNewUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Commands/CreateNewUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/IMSCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Commands/IMSCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/ListAllActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Commands/ListAllActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/ListAllPriceChange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Commands/ListAllPriceChange.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/ListAllProducts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Commands/ListAllProducts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/ListAllUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Commands/ListAllUsers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Commands/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/Logout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Commands/Logout.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/RemovePriceChange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Commands/RemovePriceChange.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/RemoveProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Commands/RemoveProduct.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/RemoveUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Commands/RemoveUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/UpdatePriceChange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Commands/UpdatePriceChange.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/UpdateProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Commands/UpdateProduct.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/UpdateUserGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Commands/UpdateUserGroup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Command/ViewProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Commands/ViewProfile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inventoryManagementSystem/DisplayHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inventoryManagementSystem/DisplayHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inventoryManagementSystem/IMSController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inventoryManagementSystem/IMSController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inventoryManagementSystem/PriceChange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Modals/PriceChange.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Modals/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Staff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Modals/Staff.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inventoryManagementSystem/UserGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Modals/UserGroup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Modals/PriceChange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Modals/PriceChange.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Modals/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Modals/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Modals/Staff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Modals/Staff.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Utils/CSVHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inventoryManagementSystem/Drivers/CSVReader.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,7 +119,7 @@
       <workItem from="1575482983842" duration="231000" />
       <workItem from="1575619349350" duration="344000" />
       <workItem from="1575619709662" duration="172000" />
-      <workItem from="1575620382753" duration="263000" />
+      <workItem from="1575620382753" duration="509000" />
     </task>
     <servers />
   </component>

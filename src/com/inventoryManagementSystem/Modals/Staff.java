@@ -1,6 +1,6 @@
 package com.inventoryManagementSystem.Modals;
 
-import com.inventoryManagementSystem.Utils.CSVHelper;
+import com.inventoryManagementSystem.Drivers.CSVReader;
 import com.inventoryManagementSystem.Commands.Logout;
 import com.inventoryManagementSystem.Utils.DisplayHelper;
 import com.inventoryManagementSystem.IMSController;
@@ -12,7 +12,7 @@ public class Staff {
     private String name;
     private String password;
     private UserGroup userGroup;
-    private static CSVHelper staffData = new CSVHelper("/com/inventoryManagementSystem/Data/staff.csv");
+    private static CSVReader staffData = new CSVReader("/com/inventoryManagementSystem/Data/staff.csv");
 
     public Staff(int id, String name, String password, int groupId) {
         this.id = id;
@@ -44,7 +44,7 @@ public class Staff {
         return id;
     }
 
-    public static void changeDataSet(CSVHelper newDataSet) {
+    public static void changeDataSet(CSVReader newDataSet) {
         staffData = newDataSet;
     }
 
