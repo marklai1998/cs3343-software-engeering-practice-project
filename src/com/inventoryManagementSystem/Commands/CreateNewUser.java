@@ -1,6 +1,8 @@
-package com.inventoryManagementSystem.Command;
+package com.inventoryManagementSystem.Commands;
 
-import com.inventoryManagementSystem.*;
+import com.inventoryManagementSystem.Modals.Staff;
+import com.inventoryManagementSystem.Modals.UserGroup;
+import com.inventoryManagementSystem.Utils.DisplayHelper;
 
 import java.util.Scanner;
 

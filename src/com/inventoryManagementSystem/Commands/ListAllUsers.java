@@ -1,7 +1,7 @@
-package com.inventoryManagementSystem.Command;
+package com.inventoryManagementSystem.Commands;
 
-import com.inventoryManagementSystem.DisplayHelper;
-import com.inventoryManagementSystem.Staff;
+import com.inventoryManagementSystem.Utils.DisplayHelper;
+import com.inventoryManagementSystem.Modals.Staff;
 
 public class ListAllUsers implements IMSCommand {
     public int getMinPermission() {

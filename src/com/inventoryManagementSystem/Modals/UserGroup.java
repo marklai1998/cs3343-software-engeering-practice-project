@@ -1,4 +1,4 @@
-package com.inventoryManagementSystem;
+package com.inventoryManagementSystem.Modals;
 
 public enum UserGroup {
     DEFAULT("Default", 0, 0),

@@ -1,8 +1,7 @@
-package com.inventoryManagementSystem.Command;
+package com.inventoryManagementSystem.Commands;
 
-import com.inventoryManagementSystem.DisplayHelper;
-import com.inventoryManagementSystem.PriceChange;
-import com.inventoryManagementSystem.Product;
+import com.inventoryManagementSystem.Utils.DisplayHelper;
+import com.inventoryManagementSystem.Modals.PriceChange;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;

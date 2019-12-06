@@ -1,4 +1,4 @@
-package com.inventoryManagementSystem;
+package com.inventoryManagementSystem.Utils;
 
 import java.io.*;
 import java.net.URL;

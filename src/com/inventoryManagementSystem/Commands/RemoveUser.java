@@ -1,17 +1,17 @@
-package com.inventoryManagementSystem.Command;
+package com.inventoryManagementSystem.Commands;
 
-import com.inventoryManagementSystem.DisplayHelper;
-import com.inventoryManagementSystem.Product;
+import com.inventoryManagementSystem.Utils.DisplayHelper;
+import com.inventoryManagementSystem.Modals.Staff;
 
 import java.util.Scanner;
 
-public class RemoveProduct implements IMSCommand {
+public class RemoveUser implements IMSCommand {
     public int getMinPermission() {
-        return 2;
+        return 3;
     }
 
     public String getDescription() {
-        return "Remove product";
+        return "Remove user";
     }
 
     public void execute() {
@@ -19,7 +19,7 @@ public class RemoveProduct implements IMSCommand {
         DisplayHelper.printHeader();
         int id = getId();
 
-        Product.removeProduct(id);
+        Staff.removeStaff(id);
 
         System.out.println("Success!");
         DisplayHelper.pressEnterToContinue();
@@ -30,9 +30,9 @@ public class RemoveProduct implements IMSCommand {
         while (true) {
             try {
                 Scanner scan = new Scanner(System.in);
-                System.out.println("Product id: ");
+                System.out.println("User id: ");
                 int id = scan.nextInt();
-                if (Product.getProduct(id) == null) {
+                if (Staff.getStaff(id) == null) {
                     System.out.println("id doesn't exist!");
                     DisplayHelper.pressEnterToContinue();
                 } else return id;

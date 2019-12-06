@@ -1,4 +1,7 @@
-package com.inventoryManagementSystem;
+package com.inventoryManagementSystem.Utils;
+
+import com.inventoryManagementSystem.IMSController;
+import com.inventoryManagementSystem.Modals.Staff;
 
 import java.util.Scanner;
 

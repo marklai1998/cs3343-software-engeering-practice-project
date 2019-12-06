@@ -1,8 +1,8 @@
-package com.inventoryManagementSystem.Command;
+package com.inventoryManagementSystem.Commands;
 
-import com.inventoryManagementSystem.DisplayHelper;
+import com.inventoryManagementSystem.Utils.DisplayHelper;
 import com.inventoryManagementSystem.IMSController;
-import com.inventoryManagementSystem.Staff;
+import com.inventoryManagementSystem.Modals.Staff;
 
 import java.util.Scanner;
 

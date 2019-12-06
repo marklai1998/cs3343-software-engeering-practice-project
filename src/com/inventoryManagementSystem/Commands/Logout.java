@@ -1,4 +1,4 @@
-package com.inventoryManagementSystem.Command;
+package com.inventoryManagementSystem.Commands;
 
 import com.inventoryManagementSystem.IMSController;
 

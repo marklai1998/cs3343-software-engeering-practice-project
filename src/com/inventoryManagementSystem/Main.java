@@ -1,7 +1,7 @@
 package com.inventoryManagementSystem;
 
-import com.inventoryManagementSystem.Command.ListAllActions;
-import com.inventoryManagementSystem.Command.Login;
+import com.inventoryManagementSystem.Commands.ListAllActions;
+import com.inventoryManagementSystem.Commands.Login;
 
 public class Main {
     public static void main(String[] args) {

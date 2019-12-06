@@ -1,4 +1,4 @@
-package com.inventoryManagementSystem.Command;
+package com.inventoryManagementSystem.Commands;
 
 public interface IMSCommand {
     IMSCommand[] allCommands = {

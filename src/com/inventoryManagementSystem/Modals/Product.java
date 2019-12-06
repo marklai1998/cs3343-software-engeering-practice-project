@@ -1,4 +1,7 @@
-package com.inventoryManagementSystem;
+package com.inventoryManagementSystem.Modals;
+
+import com.inventoryManagementSystem.Utils.CSVHelper;
+import com.inventoryManagementSystem.Utils.DisplayHelper;
 
 import java.util.ArrayList;
 
